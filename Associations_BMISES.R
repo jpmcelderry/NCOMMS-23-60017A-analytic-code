@@ -133,8 +133,8 @@ warningDS<-rep("No Error",50)
 DF<-data.frame(Condition=character(),ECase=integer(), EControl=integer(),OR=double(),low=double(),high=double(),pvalue=double(),OR1=double(),low1=double(),high1=double(),pvalue1=double())
 DS<-linkedGOLD_SES.conditionsSens1_10.small
 
-#conditions of interest start on column 44
-DF<-ProcessConditions_BMISESAdjusted(DF,DS,44,errorsDS, warningDS)
+#conditions of interest start on column 39
+DF<-ProcessConditions_BMISESAdjusted(DF,DS,39,errorsDS, warningDS)
 
 #this is a supplemental table
 write.table(DF,file=paste0(WD,"GOLDLinkedSESBMIAdjSens1_10.Jul2024.txt"),row.names = F,sep="\t")
