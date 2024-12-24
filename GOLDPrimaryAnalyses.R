@@ -15,7 +15,7 @@ library(epitools)
 #set working directory
 WD<-"./"
 setwd(WD)
-source(paste0(WD,"NSLC/ProcessConditionalLogitApr2021.R",sep=""))
+source(paste0(WD,"ProcessConditionalLogitApr2021.R",sep=""))
 
 load( file = paste0(WD,"FullDSAgeProper.Feb2022.RData"))
 
@@ -108,7 +108,8 @@ write.table(DF,file=paste0(WD,"ConditionsMale1-10Sens.Feb62022.txt"),row.names =
 ###########################################################################################################
 # ANALYSES for conditions 10-32 years (sensitive definition)
 # MUST first identify people with at least 10 years of registration
-medications_file_ageproper.longregistration<-medications_file_ageproper[which(medications_file_ageproper$difference_year>10),]
+medications_file_ageproper.longregistration<-
+  medications_file_ageproper[which(medications_file_ageproper$difference_year>10),]
 
 alt_gt10_idx<-which(grepl( "alt_gt10" , colnames( medications_file_ageproper.longregistration ) ) )
 # remove all alternate definitions
@@ -156,7 +157,6 @@ warningDS<-rep("No Error",125)
 male_idx<-which(medications_file_ageproper.conditionsSens10_32$GENDER==1)
 DF<-data.frame(Condition=character(),ECase=integer(), EControl=integer(),OR=double(),low=double(),high=double(),pvalue=double())
 DS<-medications_file_ageproper.conditionsSens10_32[male_idx,]
-dim(DS)
 DF<-ProcessConditionsMedications(DF,DS,36,errorsDS,warningDS)
 
 write.table(DF,file=paste0(WD,"ConditionsMale10-32Sens.Feb62022.txt"),row.names = F,sep="\t")

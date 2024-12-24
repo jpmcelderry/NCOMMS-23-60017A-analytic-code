@@ -3,7 +3,7 @@
 
 WD<-"./"
 setwd(WD)
-source(paste0(WD,"NSLC/ProcessConditionalLogitApr2021.R"))
+source(paste0(WD,"ProcessConditionalLogitApr2021.R"))
 
 # load dataset containing table 'medications_file_ageproper'
 load( file = paste0(WD,"FullDSAgeProper.Feb2022.RData"))

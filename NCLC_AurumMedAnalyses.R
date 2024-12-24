@@ -3,7 +3,7 @@
 
 WD<-"./"
 setwd(WD)
-source(paste0(WD,"NSLC/ProcessConditionalLogitApr2021.R"))
+source(paste0(WD,"ProcessConditionalLogitApr2021.R"))
 
 # load and read in primay DS
 load( file = paste0(WD,"AurumDeDupped.May2024.RData"))

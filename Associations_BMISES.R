@@ -10,7 +10,7 @@ library(epitools)
 # SET WORKING DIRECTORY
 WD<-"./"
 setwd(WD)
-source(paste0(WD,"NSLC/ProcessConditionalLogitApr2021.R"))
+source(paste0(WD,"ProcessConditionalLogitApr2021.R"))
 
 #read in R file 
 load( file = paste0(WD,"AurumDeDupped.May2024.RData"))
@@ -19,7 +19,7 @@ load( file = paste0(WD,"AurumDeDupped.May2024.RData"))
 
 ##### ########### ########### ########### ########### ########### ########### ########### ######
 ##### ######create your own working directory to linkage files sent by CPRD
-aurumlinkedWD<-"NSLC/LinkedData/Results/Aurum_linked/Final/"
+aurumlinkedWD<-"LinkedData/Results/Aurum_linked/Final/"
 Aurum_IMD<-read.delim(file=paste0(aurumlinkedWD,"practice_imd_18_231R.txt"))
 
 #link IMD file with analytic data file. 
@@ -58,14 +58,13 @@ write.table(DF,file=paste0(WD,"NonDupAurumFullMatchesSESBMIAdjSens1_10.Jul3.txt"
 
 ############################################################################################################
 ###### now do adjusted associations for GOLD - we lose a lot of individuals because many were not linkable.
-#     This was expected
 ############################################################################################################
 load( file = paste0(WD, "FullDSAgeProper.Feb2022.RData"))
 #load GOLD SES data, and link to GOLD SES
 #18_231R_linkage_eligibility_gold.txt file that contains all eligibility.
 
 #identify which GOLD participants could be linked to SES information
-GOLDLinkWD<-"NSLC/LinkedData/Results/GOLD_linked/Final/"
+GOLDLinkWD<-"LinkedData/Results/GOLD_linked/Final/"
 GOLD_All_Linked<-read.delim(file=paste0(GOLDLinkWD,'18_231R_linkage_eligibility_gold.txt'))
 
 #practice_imd_18_231R.txt contains index of multiple deprivation for practices
@@ -81,15 +80,11 @@ linkedGOLD_SES<-sqldf(linkedSES_query,method = "name__class")
 save(linkedGOLD_SES, file = paste0(WD,"GOLD_SESLinked.Dec2024.RData"))
 write.table(linkedGOLD_SES, file=paste0(WD,"GOLD_SESLinked.Dec2024.txt"),col.names=TRUE,row.names = F, sep="\t")
 
-
 #process sensitive 1-10 conditions
-#extract of the significant columns (associations)
+#extract the significant columns (associations)
 lt10_idx<-which(grepl( "_lt10" , colnames( linkedGOLD_SES ) ) )
-length(lt10_idx)
-#518
 
-Year_Idx<-which(grepl( "REGISTRATIONYEAR", colnames( linkedGOLD_SES )) | 
-                  grepl( "INDEXYEAR" , colnames( linkedGOLD_SES )))
+Year_Idx<-which(grepl( "REGISTRATIONYEAR", colnames( linkedGOLD_SES )) | grepl( "INDEXYEAR" , colnames( linkedGOLD_SES )))
 BMI_Idx<-which(grepl( "BMI_M12_ALL.f", colnames( linkedGOLD_SES )))
 linkedGOLD_SES.conditionsSens1_10<-linkedGOLD_SES[,c(1:34,Year_Idx,BMI_Idx,lt10_idx)]
 
