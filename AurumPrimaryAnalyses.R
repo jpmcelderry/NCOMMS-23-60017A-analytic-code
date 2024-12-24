@@ -8,30 +8,6 @@ setwd(WD)
 #read in data file
 load( file = paste0(WD,"AurumDeDupped.May2024.RData"))
 
-# main table 1
-my.render.cont <- function(x) {
-  with(stats.apply.rounding(stats.default(x), digits=3), c("",
-                                                           "Mean (SD)"=sprintf("%s (&plusmn; %s)", MEAN, SD)))
-}
-my.render.cat <- function(x) {
-  c("", sapply(stats.default(x), function(y) with(y,
-                                                  sprintf("%d (%2.1f %%)", FREQ, PCT))))
-}
-aurum_table1<-table1(~ AGE_CAT_STRING6 + Sex.f + CRD_CAT_STRING5 +INDEXYEAR_CAT_STRING5 + difference_year +
-                       BMI_M12_ALL.f +  ALCOHOL_STATUS_MR_1YRS.f + REGION.f| Case_Status.f, 
-                     topclass = "Rtable1-zebra",
-                     render.categorical=my.render.cat,render.continuous=c(.="Mean (SD)", .="Median [Min,Q1,Q3 Max]"),
-                     data=NonDupAurumFullMatches)
-
-###### write out table to something easily imported into excel
-library(rvest)
-tmp1<-read_html(aurum_table1)
-aurum_table1.table<-html_table(html_nodes(tmp1, "table")[[1]])
-
-#write table 1
-write.table(aurum_table1.table,file=paste0(WD,"AurumDeDuppedTable1_May2024.txt"),sep="\t")
-#save file for analyses
-
 ###################################################  ###################################################
 #perform conditional logistic regression analyses with non-duplicated population
 #(first 1-10 years; then 10-32 years)
@@ -127,3 +103,4 @@ DF<-data.frame(Condition=character(),ECase=integer(), EControl=integer(),OR=doub
 DS<-NonDupAurumFullMatches.conditionsSens10_32
 DF<-ProcessConditionsMedications(DF,DS,49,errorsDS,warningDS)
 write.table(DF,file=paste0(WD,"NonDupAurumFullMatchesSens10_32.Apr182024.txt"),row.names = F,sep="\t")
+

@@ -161,8 +161,6 @@ Aurum_All_Linked<-read.delim(file=Aurum_All_Linked_File)
 AurumLinked_IMD<-'LinkedData/Results/Aurum_linked/Final/practice_imd_18_231R.txt'
 Aurum_IMD<-read.delim(file=AurumLinked_IMD)
 
-
-
 ########### ###########link only keep non-duplicates in analytic data file #############################
 linked_query<-"SELECT distinct a.* FROM medications_file_ageproper as a where a.patid in (Select distinct patid from Aurum_All_Linked)";
 NonDuplicatedAurum<-sqldf(linked_query,method = "name__class")
@@ -190,9 +188,6 @@ NonDupAurumFullMatches$AGE_CAT_STRING6<- ifelse(NonDupAurumFullMatches$indexage 
                                                               ifelse(NonDupAurumFullMatches$indexage < 70, "60-69",
                                                                      ifelse(NonDupAurumFullMatches$indexage < 80, "70-79", "80-89")))))
 
-
-
-
 NonDupAurumFullMatches$CRD_CAT_STRING5<-ifelse(NonDupAurumFullMatches$REGISTRATIONYEAR < 1981, "1980 and earlier", 
                                                ifelse(NonDupAurumFullMatches$REGISTRATIONYEAR < 1991, "1981-1990",
                                                       ifelse(NonDupAurumFullMatches$REGISTRATIONYEAR < 2001, "1991-2000",
@@ -212,15 +207,9 @@ NonDupAurumFullMatches$BMI_M12_ALL.f<-ifelse(is.na(NonDupAurumFullMatches$BMI_12
                                                     ifelse(NonDupAurumFullMatches$BMI_12M_Rev1==2, "1.Normal",
                                                            ifelse(NonDupAurumFullMatches$BMI_12M_Rev1==3, "2.Overweight","3.Obese")))) #combine obese and morbidly obese
 
-
-
 NonDupAurumFullMatches$ALCOHOL_STATUS_MR_1YRS.f<-ifelse(NonDupAurumFullMatches$ALCOHOL_STATUS_1YRS_Rev1==0,"2.Never",
                                                         ifelse(NonDupAurumFullMatches$ALCOHOL_STATUS_1YRS_Rev1==1,"1.Former",
                                                                ifelse(NonDupAurumFullMatches$ALCOHOL_STATUS_1YRS_Rev1==2,"0.Current","3.Missing")))
-
-
-
-
 
 
 label(NonDupAurumFullMatches$REGION.f)<-"Region, n (%)"
