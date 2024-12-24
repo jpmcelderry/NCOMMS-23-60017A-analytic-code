@@ -19,32 +19,6 @@ source(paste0(WD,"ProcessConditionalLogitApr2021.R",sep=""))
 
 load( file = paste0(WD,"FullDSAgeProper.Feb2022.RData"))
 
-#write table 1
-# main table 1 (GOLD)
-my.render.cont <- function(x) {
-  with(stats.apply.rounding(stats.default(x), digits=3), c("",
-                                                           "Mean (SD)"=sprintf("%s (&plusmn; %s)", MEAN, SD)))
-}
-my.render.cat <- function(x) {
-  c("", sapply(stats.default(x), function(y) with(y,
-                                                  sprintf("%d (%2.1f %%)", FREQ, PCT))))
-}
-gold_table1<-table1(~ AGE_CAT_STRING6 + Sex.f + CRD_CAT_STRING5 +INDEXYEAR_CAT_STRING5 + difference_year +
-                      BMI_M12_ALL.f +  ALCOHOL_STATUS_MR_1YRS.f + REGION.f| Case_Status.f, 
-                    topclass = "Rtable1-zebra",
-                    render.categorical=my.render.cat,render.continuous=c(.="Mean (SD)", .="Median [Min,Q1,Q3 Max]"),
-                    data=medications_file_ageproper)
-
-###### ########################################################################
-# write out table to something easily imported into excel
-library(rvest)
-tmp1<-read_html(gold_table1)
-gold_table1.table<-html_table(html_nodes(tmp1, "table")[[1]])
-
-#write table 1
-write.table(gold_table1.table,file=paste0(WD,"GoldTable1_May2024.txt"),sep="\t")
-
-
 ##################################################################################
 ##################### ##################### ##################### ##################### 
 # process sensitive 1-10 conditions. This is the primary analysis of associations between
