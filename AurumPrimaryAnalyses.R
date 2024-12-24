@@ -127,4 +127,3 @@ DF<-data.frame(Condition=character(),ECase=integer(), EControl=integer(),OR=doub
 DS<-NonDupAurumFullMatches.conditionsSens10_32
 DF<-ProcessConditionsMedications(DF,DS,49,errorsDS,warningDS)
 write.table(DF,file=paste0(WD,"NonDupAurumFullMatchesSens10_32.Apr182024.txt"),row.names = F,sep="\t")
-
