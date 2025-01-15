@@ -1,0 +1,298 @@
+column	type	label	min	max
+PATID	character	Encrypted unique identifier given to a patient in CPRD Aurum	NA	NA
+PRACID	character	Encrypted unique identifier given to a practice in CPRD Aurum	NA	NA
+GENDER	numeric	Patient gender	1	2
+YOB	numeric	Patient year of birth	1899	2003
+MOB	numeric	Patient month of birth (for those under 16)	5	8
+ACCEPTABLE	numeric	Flag to indicate whether the patient has met certain quality standards	1	1
+REGSTARTDATE	numeric	Date the patient registered with the CPRD contributing practice	-17848	21474
+REGENDDATE	numeric	Date the patient registration at the practice ended	10773	2936547
+CPRD_DDATE	numeric	Estimated date of death (derived using a CPRD algorithm)	10773	21860
+REGION	numeric	Value to indicate where in the UK the practice is based	1	10
+LCD	numeric	Date of the most recent CPRD data collection for the practice	21096	21863
+UTS	numeric	Date at which practice data is deemed to be of research quality based on CRPD algorithm (not currently populated)	Inf	-Inf
+INDEXDATE	numeric	Date of first population defining event	10416	21859
+case_status	numeric	Case/control status	0	1
+SETID	numeric	Matched set identifier	1	3324
+case_and_control	numeric	Flag: patient is in this dataset as both a case and a control	0	1
+ALCOHOL_STATUS_CAT	numeric	Most recent drinking status captured at least 1 year prior to index date	0	2
+ALCOHOL_STATUS_CAT_DT	numeric	Most recent drinking status captured at least 1 year prior to index date: date	-36524	21472
+ALCOHOL_STATUS_TIME_TO_ENDOFFUP	numeric	Most recent drinking status: # of days collected prior to end of follow up	365	54086
+HEIGHT_IN_M	numeric	Height: most recently reported captured at least 1 year prior to index date, meters	1.0182	2.5
+OBESITY	numeric	Obesity: most recent status captured at least 1 year prior to index date	1	5
+OBESITY_DATE	numeric	Obesity: most recent status captured at least 1 year prior to index date, date	-3403	21472
+OBESITY_METHOD	numeric	Obesity: most recent status captured at least 1 year prior to index date, method of report (1=continuous, 2=categorical)	1	2
+OBESITY_TIME_TO_ENDOFFUP	numeric	Obesity: # of days collected prior to end of follow up	365	17480
+first_date_of_smoking	numeric	Date of first report of smoking	11596	21801
+tb_lt10	numeric	Flag: ever have a medical code for tuberculosis 1-10 yrs prior to index date	0	1
+tb_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for tuberculosis 1-10 yrs prior to index date	11219	21063
+flu_lt10	numeric	Flag: ever have a medical code for flu 1-10 yrs prior to index date	0	1
+flu_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for flu 1-10 yrs prior to index date	10311	20662
+uresp_lt10	numeric	Flag: ever have a medical code for upper respiratory infection 1-10 yrs prior to index date	0	1
+uresp_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for upper respiratory infection 1-10 yrs prior to index date	9862	21357
+gi_gastrexact_lt10	numeric	Flag: ever have a medical code for gastroentiritis exact 1-10 yrs prior to index date	0	1
+gi_gastrexact_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis exact 1-10 yrs prior to index date	10305	21138
+gi_gastrrelated_lt10	numeric	Flag: ever have a medical code for gastroentiritis related 1-10 yrs prior to index date	0	1
+gi_gastrrelated_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis related 1-10 yrs prior to index date	10305	21138
+gi_gastrhyper_lt10	numeric	Flag: ever have a medical code for gastroentiritis hypertrophic 1-10 yrs prior to index date	0	0
+gi_gastrhyper_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis hypertrophic 1-10 yrs prior to index date	Inf	-Inf
+gi_gastrai_lt10	numeric	Flag: ever have a medical code for gastroentiritis AI 1-10 yrs prior to index date	0	1
+gi_gastrai_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis AI 1-10 yrs prior to index date	11126	20457
+gi_gastracute_lt10	numeric	Flag: ever have a medical code for gastroentiritis acute 1-10 yrs prior to index date	0	1
+gi_gastracute_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis acute 1-10 yrs prior to index date	11499	20587
+gi_gastrchronic_lt10	numeric	Flag: ever have a medical code for gastroentiritis chronic 1-10 yrs prior to index date	0	1
+gi_gastrchronic_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis chronic 1-10 yrs prior to index date	10593	20832
+gi_gastritis_lt10	numeric	Flag: ever have a medical code for gastritis 1-10 yrs prior to index date	0	1
+gi_gastritis_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastritis 1-10 yrs prior to index date	10305	21138
+gi_gastrcolitis_lt10	numeric	Flag: ever have a medical code for colitis 1-10 yrs prior to index date	0	1
+gi_gastrcolitis_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for colitis 1-10 yrs prior to index date	11498	20667
+gi_gerd_lt10	numeric	Flag: ever have a medical code for GERD 1-10 yrs prior to index date	0	1
+gi_gerd_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GERD 1-10 yrs prior to index date	9862	21312
+ai_dmt1_lt10	numeric	Flag: ever have a medical code for type 1 diabetes 1-10 yrs prior to index date	0	1
+ai_dmt1_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for type 1 diabetes 1-10 yrs prior to index date	10958	20947
+ai_lupus_lt10	numeric	Flag: ever have a medical code for Lupus 1-10 yrs prior to index date	0	1
+ai_lupus_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for Lupus 1-10 yrs prior to index date	11963	20549
+ii_ai_psor_lt10	numeric	Flag: ever have a medical code for psoriasis 1-10 yrs prior to index date	0	1
+ii_ai_psor_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for psoriasis 1-10 yrs prior to index date	10593	21406
+ai_oth2_lt10	numeric	Flag: ever have a medical code for AI_oth2 1-10 yrs prior to index date	0	1
+ai_oth2_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for AI_oth2 1-10 yrs prior to index date	9862	21019
+ai_oth2_maybe_lt10	numeric	Flag: ever have a medical code for AI_oth2_Maybe 1-10 yrs prior to index date	0	1
+ai_oth2_maybe_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for AI_oth2_Maybe 1-10 yrs prior to index date	10632	20663
+ai_oth2_VS_lt10	numeric	Flag: ever have a medical code for villonodular synovitis 1-10 yrs prior to index date	0	1
+ai_oth2_VS_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for villonodular synovitis 1-10 yrs prior to index date	16254	19337
+ai_rose_exact_lt10	numeric	Flag: ever have a medical code for rosacea (exact) 1-10 yrs prior to index date	0	1
+ai_rose_exact_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for rosacea (exact) 1-10 yrs prior to index date	10073	21222
+ai_rose_close_lt10	numeric	Flag: ever have a medical code for rosacea (close) 1-10 yrs prior to index date	0	1
+ai_rose_close_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for rosacea (close) 1-10 yrs prior to index date	15680	17133
+copd_lt10	numeric	Flag: ever have a medical code for COPD 1-10 yrs prior to index date	0	1
+copd_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for COPD 1-10 yrs prior to index date	9862	21063
+cvd_chd_angina_lt10	numeric	Flag: ever have a medical code for angina 1-10 yrs prior to index date	0	1
+cvd_chd_angina_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for angina 1-10 yrs prior to index date	9862	21328
+cvd_chd_infarct_lt10	numeric	Flag: ever have a medical code for infarction 1-10 yrs prior to index date	0	1
+cvd_chd_infarct_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for infarction 1-10 yrs prior to index date	9862	21287
+cvd_chd_other_lt10	numeric	Flag: ever have a medical code for CVD/CHD other 1-10 yrs prior to index date	0	1
+cvd_chd_other_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for CVD/CHD other 1-10 yrs prior to index date	10189	21409
+cvd_hf_precursor_lt10	numeric	Flag: ever have a medical code for CVD/HF precursor 1-10 yrs prior to index date	0	1
+cvd_hf_precursor_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for CVD/HF precursor 1-10 yrs prior to index date	9862	21236
+cvd_hf_failure_lt10	numeric	Flag: ever have a medical code for heart failure 1-10 yrs prior to index date	0	1
+cvd_hf_failure_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for heart failure 1-10 yrs prior to index date	9862	21448
+cvd_pvd_lt10	numeric	Flag: ever have a medical code for PVD 1-10 yrs prior to index date	0	1
+cvd_pvd_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for PVD 1-10 yrs prior to index date	9862	21134
+anemiaclose_lt10	numeric	Flag: ever have a medical code for anemia (close/exact) 1-10 yrs prior to index date	0	1
+anemiaclose_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (close/exact) 1-10 yrs prior to index date	9862	21395
+anemiasimilar_lt10	numeric	Flag: ever have a medical code for anemia (similar) 1-10 yrs prior to index date	0	1
+anemiasimilar_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (similar) 1-10 yrs prior to index date	10958	21214
+anemiamega_lt10	numeric	Flag: ever have a medical code for anemia (megaloblastic) 1-10 yrs prior to index date	0	1
+anemiamega_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (megaloblastic) 1-10 yrs prior to index date	13627	19527
+anemiairon_lt10	numeric	Flag: ever have a medical code for anemia (iron deficiency) 1-10 yrs prior to index date	0	1
+anemiairon_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (iron deficiency) 1-10 yrs prior to index date	9921	21340
+anemiab12_lt10	numeric	Flag: ever have a medical code for anemia (B12) 1-10 yrs prior to index date	0	1
+anemiab12_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (B12) 1-10 yrs prior to index date	10958	19966
+anemiafolate_lt10	numeric	Flag: ever have a medical code for anemia (folic acid) 1-10 yrs prior to index date	0	1
+anemiafolate_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (folic acid) 1-10 yrs prior to index date	13779	21214
+anemiapernicious_lt10	numeric	Flag: ever have a medical code for anemia (pernicious) 1-10 yrs prior to index date	0	1
+anemiapernicious_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (pernicious) 1-10 yrs prior to index date	9862	20874
+anemiaother_lt10	numeric	Flag: ever have a medical code for anemia (other) 1-10 yrs prior to index date	0	1
+anemiaother_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (other) 1-10 yrs prior to index date	10392	21092
+gi_ulcerall_lt10	numeric	Flag: ever have a medical code for GI ulcerall 1-10 yrs prior to index date	0	1
+gi_ulcerall_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcerall 1-10 yrs prior to index date	9862	21096
+gi_ulceracute_lt10	numeric	Flag: ever have a medical code for GI ulcer acute all 1-10 yrs prior to index date	0	1
+gi_ulceracute_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer acute all 1-10 yrs prior to index date	10958	20409
+gi_ulcerduo_lt10	numeric	Flag: ever have a medical code for GI ulcer duodenal 1-10 yrs prior to index date	0	1
+gi_ulcerduo_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer duodenal 1-10 yrs prior to index date	9862	20947
+gi_ulcergas_lt10	numeric	Flag: ever have a medical code for GI ulcer gastric 1-10 yrs prior to index date	0	1
+gi_ulcergas_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer gastric 1-10 yrs prior to index date	9862	21096
+gi_ulcerpep_lt10	numeric	Flag: ever have a medical code for GI ulcer peptic 1-10 yrs prior to index date	0	1
+gi_ulcerpep_lt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer peptic 1-10 yrs prior to index date	10348	19991
+tb_gt10	numeric	Flag: ever have a medical code for tuberculosis 10+ yrs prior to index date	0	1
+tb_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for tuberculosis 10+ yrs prior to index date	9862	18016
+flu_gt10	numeric	Flag: ever have a medical code for flu 10+ yrs prior to index date	0	1
+flu_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for flu 10+ yrs prior to index date	9994	17722
+uresp_gt10	numeric	Flag: ever have a medical code for upper respiratory infection 10+ yrs prior to index date	0	1
+uresp_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for upper respiratory infection 10+ yrs prior to index date	9862	18028
+gi_gastrexact_gt10	numeric	Flag: ever have a medical code for gastroentiritis exact 10+ yrs prior to index date	0	1
+gi_gastrexact_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis exact 10+ yrs prior to index date	9862	18046
+gi_gastrrelated_gt10	numeric	Flag: ever have a medical code for gastroentiritis related 10+ yrs prior to index date	0	1
+gi_gastrrelated_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis related 10+ yrs prior to index date	9862	18046
+gi_gastrhyper_gt10	numeric	Flag: ever have a medical code for gastroentiritis hypertrophic 10+ yrs prior to index date	0	0
+gi_gastrhyper_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis hypertrophic 10+ yrs prior to index date	Inf	-Inf
+gi_gastrai_gt10	numeric	Flag: ever have a medical code for gastroentiritis AI 10+ yrs prior to index date	0	1
+gi_gastrai_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis AI 10+ yrs prior to index date	11053	15736
+gi_gastracute_gt10	numeric	Flag: ever have a medical code for gastroentiritis acute 10+ yrs prior to index date	0	1
+gi_gastracute_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis acute 10+ yrs prior to index date	10166	17407
+gi_gastrchronic_gt10	numeric	Flag: ever have a medical code for gastroentiritis chronic 10+ yrs prior to index date	0	1
+gi_gastrchronic_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastroentiritis chronic 10+ yrs prior to index date	11053	17552
+gi_gastritis_gt10	numeric	Flag: ever have a medical code for gastritis 10+ yrs prior to index date	0	1
+gi_gastritis_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for gastritis 10+ yrs prior to index date	9862	18046
+gi_gastrcolitis_gt10	numeric	Flag: ever have a medical code for colitis 10+ yrs prior to index date	0	1
+gi_gastrcolitis_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for colitis 10+ yrs prior to index date	9862	17164
+gi_gerd_gt10	numeric	Flag: ever have a medical code for GERD 10+ yrs prior to index date	0	1
+gi_gerd_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GERD 10+ yrs prior to index date	9862	18157
+ai_dmt1_gt10	numeric	Flag: ever have a medical code for type 1 diabetes 10+ yrs prior to index date	0	1
+ai_dmt1_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for type 1 diabetes 10+ yrs prior to index date	9862	17590
+ai_lupus_gt10	numeric	Flag: ever have a medical code for Lupus 10+ yrs prior to index date	0	1
+ai_lupus_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for Lupus 10+ yrs prior to index date	9936	16672
+ii_ai_psor_gt10	numeric	Flag: ever have a medical code for psoriasis 10+ yrs prior to index date	0	1
+ii_ai_psor_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for psoriasis 10+ yrs prior to index date	9862	17869
+ai_oth2_gt10	numeric	Flag: ever have a medical code for AI_oth2 10+ yrs prior to index date	0	1
+ai_oth2_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for AI_oth2 10+ yrs prior to index date	9862	18165
+ai_oth2_maybe_gt10	numeric	Flag: ever have a medical code for AI_oth2_Maybe 10+ yrs prior to index date	0	1
+ai_oth2_maybe_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for AI_oth2_Maybe 10+ yrs prior to index date	10593	17336
+ai_oth2_VS_gt10	numeric	Flag: ever have a medical code for villonodular synovitis 10+ yrs prior to index date	0	0
+ai_oth2_VS_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for villonodular synovitis 10+ yrs prior to index date	Inf	-Inf
+ai_rose_exact_gt10	numeric	Flag: ever have a medical code for rosacea (exact) 10+ yrs prior to index date	0	1
+ai_rose_exact_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for rosacea (exact) 10+ yrs prior to index date	9862	18148
+ai_rose_close_gt10	numeric	Flag: ever have a medical code for rosacea (close) 10+ yrs prior to index date	0	1
+ai_rose_close_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for rosacea (close) 10+ yrs prior to index date	16474	17142
+copd_gt10	numeric	Flag: ever have a medical code for COPD 10+ yrs prior to index date	0	1
+copd_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for COPD 10+ yrs prior to index date	9862	17666
+cvd_chd_angina_gt10	numeric	Flag: ever have a medical code for angina 10+ yrs prior to index date	0	1
+cvd_chd_angina_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for angina 10+ yrs prior to index date	9862	17993
+cvd_chd_infarct_gt10	numeric	Flag: ever have a medical code for infarction 10+ yrs prior to index date	0	1
+cvd_chd_infarct_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for infarction 10+ yrs prior to index date	9862	18022
+cvd_chd_other_gt10	numeric	Flag: ever have a medical code for CVD/CHD other 10+ yrs prior to index date	0	1
+cvd_chd_other_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for CVD/CHD other 10+ yrs prior to index date	9862	18143
+cvd_hf_precursor_gt10	numeric	Flag: ever have a medical code for CVD/HF precursor 10+ yrs prior to index date	0	1
+cvd_hf_precursor_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for CVD/HF precursor 10+ yrs prior to index date	9862	17675
+cvd_hf_failure_gt10	numeric	Flag: ever have a medical code for heart failure 10+ yrs prior to index date	0	1
+cvd_hf_failure_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for heart failure 10+ yrs prior to index date	9862	17611
+cvd_pvd_gt10	numeric	Flag: ever have a medical code for PVD 10+ yrs prior to index date	0	1
+cvd_pvd_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for PVD 10+ yrs prior to index date	10233	17189
+anemiaclose_gt10	numeric	Flag: ever have a medical code for anemia (close/exact) 10+ yrs prior to index date	0	1
+anemiaclose_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (close/exact) 10+ yrs prior to index date	9862	18073
+anemiasimilar_gt10	numeric	Flag: ever have a medical code for anemia (similar) 10+ yrs prior to index date	0	1
+anemiasimilar_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (similar) 10+ yrs prior to index date	11323	16510
+anemiamega_gt10	numeric	Flag: ever have a medical code for anemia (megaloblastic) 10+ yrs prior to index date	0	1
+anemiamega_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (megaloblastic) 10+ yrs prior to index date	12054	12825
+anemiairon_gt10	numeric	Flag: ever have a medical code for anemia (iron deficiency) 10+ yrs prior to index date	0	1
+anemiairon_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (iron deficiency) 10+ yrs prior to index date	9862	17881
+anemiab12_gt10	numeric	Flag: ever have a medical code for anemia (B12) 10+ yrs prior to index date	0	1
+anemiab12_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (B12) 10+ yrs prior to index date	10227	17126
+anemiafolate_gt10	numeric	Flag: ever have a medical code for anemia (folic acid) 10+ yrs prior to index date	0	1
+anemiafolate_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (folic acid) 10+ yrs prior to index date	12054	15826
+anemiapernicious_gt10	numeric	Flag: ever have a medical code for anemia (pernicious) 10+ yrs prior to index date	0	1
+anemiapernicious_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (pernicious) 10+ yrs prior to index date	9862	17498
+anemiaother_gt10	numeric	Flag: ever have a medical code for anemia (other) 10+ yrs prior to index date	0	1
+anemiaother_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for anemia (other) 10+ yrs prior to index date	12037	17034
+gi_ulcerall_gt10	numeric	Flag: ever have a medical code for GI ulcerall 10+ yrs prior to index date	0	1
+gi_ulcerall_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcerall 10+ yrs prior to index date	9862	17856
+gi_ulceracute_gt10	numeric	Flag: ever have a medical code for GI ulcer acute all 10+ yrs prior to index date	0	1
+gi_ulceracute_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer acute all 10+ yrs prior to index date	9862	17285
+gi_ulcerduo_gt10	numeric	Flag: ever have a medical code for GI ulcer duodenal 10+ yrs prior to index date	0	1
+gi_ulcerduo_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer duodenal 10+ yrs prior to index date	9862	17856
+gi_ulcergas_gt10	numeric	Flag: ever have a medical code for GI ulcer gastric 10+ yrs prior to index date	0	1
+gi_ulcergas_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer gastric 10+ yrs prior to index date	10098	17285
+gi_ulcerpep_gt10	numeric	Flag: ever have a medical code for GI ulcer peptic 10+ yrs prior to index date	0	1
+gi_ulcerpep_gt10_date	numeric	1st Medcodeid Event Date: ever have a medical code for GI ulcer peptic 10+ yrs prior to index date	9862	16926
+antacid_lt10	numeric	Flag: ever have a product code for antacid use 1-10 years prior to index date	0	1
+antacid_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for antacid use 1-10 years prior to index date	9999	21348
+antimuscbronc_lt10	numeric	Flag: ever have a product code for antimuscbronc drug use 1-10 years prior to index date	0	1
+antimuscbronc_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for antimuscbronc drug use 1-10 years prior to index date	10433	21066
+steroidsoral_lt10	numeric	Flag: ever have a product code for oral steroid drug use 1-10 years prior to index date	0	1
+steroidsoral_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for oral steroid drug use 1-10 years prior to index date	10132	21376
+oraliron_lt10	numeric	Flag: ever have a product code for oral iron use 1-10 years prior to index date	0	1
+oraliron_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for oral iron use 1-10 years prior to index date	10323	21411
+loop_lt10	numeric	Flag: ever have a product code for loop diuretic drug use 1-10 years prior to index date	0	1
+loop_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for loop diuretic drug use 1-10 years prior to index date	9957	21312
+cmpd_analg_lt10	numeric	Flag: ever have a product code for compound analgesics use 1-10 years prior to index date	0	1
+cmpd_analg_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for compound analgesics use 1-10 years prior to index date	9981	21480
+PPI_lt10	numeric	Flag: ever have a product code for PPI drug use 1-10 years prior to index date	0	1
+PPI_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for PPI drug use 1-10 years prior to index date	10686	21409
+H2recanta_lt10	numeric	Flag: ever have a product code for H2 receptor antagonist drug use 1-10 years prior to index date	0	1
+H2recanta_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for H2 receptor antagonist drug use 1-10 years prior to index date	9957	21409
+imm_resp_lt10	numeric	Flag: ever have a product code for immune response drug use 1-10 years prior to index date	0	1
+imm_resp_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for immune response drug use 1-10 years prior to index date	11415	20748
+azathioprine_lt10	numeric	Flag: ever have a product code for azathioprine drug use 1-10 years prior to index date	0	1
+azathioprine_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for azathioprine drug use 1-10 years prior to index date	11427	20711
+methotrexate_lt10	numeric	Flag: ever have a product code for methotrexate drug use 1-10 years prior to index date	0	1
+methotrexate_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for methotrexate drug use 1-10 years prior to index date	11415	20748
+SABA_lt10	numeric	Flag: ever have a product code for SABA drug use 1-10 years prior to index date	0	1
+SABA_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for SABA drug use 1-10 years prior to index date	10066	21375
+LABA_lt10	numeric	Flag: ever have a product code for LABA drug use 1-10 years prior to index date	0	1
+LABA_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for LABA drug use 1-10 years prior to index date	10385	21372
+mucolytic_lt10	numeric	Flag: ever have a product code for mucolytic drug use 1-10 years prior to index date	0	1
+mucolytic_lt10_date	numeric	1st Prodcode Event Date: ever have a product code for mucolytic drug use 1-10 years prior to index date	10189	21354
+antacid_gt10	numeric	Flag: ever have a product code for antacid use 10+ years prior to index date	0	1
+antacid_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for antacid use 10+ years prior to index date	9975	18022
+antimuscbronc_gt10	numeric	Flag: ever have a product code for antimuscbronc drug use 10+ years prior to index date	0	1
+antimuscbronc_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for antimuscbronc drug use 10+ years prior to index date	10825	17920
+steroidsoral_gt10	numeric	Flag: ever have a product code for oral steroid drug use 10+ years prior to index date	0	1
+steroidsoral_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for oral steroid drug use 10+ years prior to index date	9884	18171
+oraliron_gt10	numeric	Flag: ever have a product code for oral iron use 10+ years prior to index date	0	1
+oraliron_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for oral iron use 10+ years prior to index date	10132	18007
+loop_gt10	numeric	Flag: ever have a product code for loop diuretic drug use 10+ years prior to index date	0	1
+loop_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for loop diuretic drug use 10+ years prior to index date	9867	18038
+cmpd_analg_gt10	numeric	Flag: ever have a product code for compound analgesics use 10+ years prior to index date	0	1
+cmpd_analg_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for compound analgesics use 10+ years prior to index date	9873	18106
+PPI_gt10	numeric	Flag: ever have a product code for PPI drug use 10+ years prior to index date	0	1
+PPI_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for PPI drug use 10+ years prior to index date	10380	18108
+H2recanta_gt10	numeric	Flag: ever have a product code for H2 receptor antagonist drug use 10+ years prior to index date	0	1
+H2recanta_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for H2 receptor antagonist drug use 10+ years prior to index date	10232	17994
+imm_resp_gt10	numeric	Flag: ever have a product code for immune response drug use 10+ years prior to index date	0	1
+imm_resp_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for immune response drug use 10+ years prior to index date	10937	18052
+azathioprine_gt10	numeric	Flag: ever have a product code for azathioprine drug use 10+ years prior to index date	0	1
+azathioprine_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for azathioprine drug use 10+ years prior to index date	10937	18052
+methotrexate_gt10	numeric	Flag: ever have a product code for methotrexate drug use 10+ years prior to index date	0	1
+methotrexate_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for methotrexate drug use 10+ years prior to index date	11115	17931
+SABA_gt10	numeric	Flag: ever have a product code for SABA drug use 10+ years prior to index date	0	1
+SABA_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for SABA drug use 10+ years prior to index date	9888	18044
+LABA_gt10	numeric	Flag: ever have a product code for LABA drug use 10+ years prior to index date	0	1
+LABA_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for LABA drug use 10+ years prior to index date	11357	18007
+mucolytic_gt10	numeric	Flag: ever have a product code for mucolytic drug use 10+ years prior to index date	0	1
+mucolytic_gt10_date	numeric	1st Prodcode Event Date: ever have a product code for mucolytic drug use 10+ years prior to index date	10308	18071
+antacid_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for antacid use 10+ years prior to index date	10162	18001
+antacid_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for antacid use 10+ years prior to index date	0	1
+antimuscbronc_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for antimuscbronc drug use 10+ years prior to index date	10825	17920
+antimuscbronc_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for antimuscbronc drug use 10+ years prior to index date	0	1
+steroidsoral_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for oral steroid drug use 10+ years prior to index date	9884	18171
+steroidsoral_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for oral steroid drug use 10+ years prior to index date	0	1
+oraliron_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for oral iron use 10+ years prior to index date	10335	18004
+oraliron_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for oral iron use 10+ years prior to index date	0	1
+loop_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for loop diuretic drug use 10+ years prior to index date	9867	18038
+loop_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for loop diuretic drug use 10+ years prior to index date	0	1
+cmpd_analg_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for compound analgesics use 10+ years prior to index date	9873	18085
+cmpd_analg_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for compound analgesics use 10+ years prior to index date	0	1
+PPI_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for PPI drug use 10+ years prior to index date	11022	18085
+PPI_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for PPI drug use 10+ years prior to index date	0	1
+H2recanta_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for H2 receptor antagonist drug use 10+ years prior to index date	10232	17988
+H2recanta_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for H2 receptor antagonist drug use 10+ years prior to index date	0	1
+imm_resp_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for immune response drug use 10+ years prior to index date	10937	18052
+imm_resp_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for immune response drug use 10+ years prior to index date	0	1
+azathioprine_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for azathioprine drug use 10+ years prior to index date	10937	18052
+azathioprine_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for azathioprine drug use 10+ years prior to index date	0	1
+methotrexate_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for methotrexate drug use 10+ years prior to index date	11339	17393
+methotrexate_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for methotrexate drug use 10+ years prior to index date	0	1
+SABA_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for SABA drug use 10+ years prior to index date	9888	18044
+SABA_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for SABA drug use 10+ years prior to index date	0	1
+LABA_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for LABA drug use 10+ years prior to index date	11358	18007
+LABA_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for LABA drug use 10+ years prior to index date	0	1
+mucolytic_alt_gt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for mucolytic drug use 10+ years prior to index date	10581	17983
+mucolytic_alt_gt10	numeric	Flag: ever have 2+ codes w/in 6 months for mucolytic drug use 10+ years prior to index date	0	1
+antacid_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for antacid use 1-10 years prior to index date	9999	21348
+antacid_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for antacid use 1-10 years prior to index date	0	1
+antimuscbronc_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for antimuscbronc drug use 1-10 years prior to index date	10433	20955
+antimuscbronc_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for antimuscbronc drug use 1-10 years prior to index date	0	1
+steroidsoral_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for oral steroid drug use 1-10 years prior to index date	10132	21222
+steroidsoral_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for oral steroid drug use 1-10 years prior to index date	0	1
+oraliron_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for oral iron use 1-10 years prior to index date	10323	21277
+oraliron_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for oral iron use 1-10 years prior to index date	0	1
+loop_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for loop diuretic drug use 1-10 years prior to index date	9957	21312
+loop_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for loop diuretic drug use 1-10 years prior to index date	0	1
+cmpd_analg_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for compound analgesics use 1-10 years prior to index date	9981	21347
+cmpd_analg_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for compound analgesics use 1-10 years prior to index date	0	1
+PPI_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for PPI drug use 1-10 years prior to index date	11270	21371
+PPI_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for PPI drug use 1-10 years prior to index date	0	1
+H2recanta_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for H2 receptor antagonist drug use 1-10 years prior to index date	9957	21094
+H2recanta_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for H2 receptor antagonist drug use 1-10 years prior to index date	0	1
+imm_resp_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for immune response drug use 1-10 years prior to index date	11415	20748
+imm_resp_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for immune response drug use 1-10 years prior to index date	0	1
+azathioprine_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for azathioprine drug use 1-10 years prior to index date	11427	20474
+azathioprine_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for azathioprine drug use 1-10 years prior to index date	0	1
+methotrexate_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for methotrexate drug use 1-10 years prior to index date	11415	20748
+methotrexate_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for methotrexate drug use 1-10 years prior to index date	0	1
+SABA_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for SABA drug use 1-10 years prior to index date	10066	21375
+SABA_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for SABA drug use 1-10 years prior to index date	0	1
+LABA_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for LABA drug use 1-10 years prior to index date	11302	21372
+LABA_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for LABA drug use 1-10 years prior to index date	0	1
+mucolytic_alt_lt10_date	numeric	1st Prescription Event Date: ever have 2+ codes w/in 6 months for mucolytic drug use 1-10 years prior to index date	10430	21299
+mucolytic_alt_lt10	numeric	Flag: ever have 2+ codes w/in 6 months for mucolytic drug use 1-10 years prior to index date	0	1
